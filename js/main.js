@@ -42,33 +42,33 @@ let cantidad3 = 0;
 let cantidad4 = 0;
 let cantidad5 = 0;
 
-function pedirCantidad(unidades, tipo) {
-  unidades = parseInt(prompt(`Cuantas talitas de ${tipo} vas a querer?`));
+// function pedirCantidad(unidades, tipo) {
+//   unidades = parseInt(prompt(`Cuantas talitas de ${tipo} vas a querer?`));
 
-  while (Number.isInteger(unidades) == false) {
-    unidades = parseInt(
-      prompt(`Ingresa un numero, cuantas talitas de ${tipo} vas a querer?`)
-    );
-  }
-}
+//   while (Number.isInteger(unidades) == false) {
+//     unidades = parseInt(
+//       prompt(`Ingresa un numero, cuantas talitas de ${tipo} vas a querer?`)
+//     );
+//   }
+// }
 
-function definirSabor(tipo) {
-  console.log(tipo);
-  tipo = prompt(
-    `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-  ).toLowerCase();
-  while (
-    tipo != `original` &&
-    tipo != `jamon` &&
-    tipo != `queso` &&
-    tipo != `oregano` &&
-    tipo != `cebolla`
-  ) {
-    tipo = prompt(
-      `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-  }
-}
+// function definirSabor(tipo) {
+//   console.log(tipo);
+//   tipo = prompt(
+//     `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
+//   ).toLowerCase();
+//   while (
+//     tipo != `original` &&
+//     tipo != `jamon` &&
+//     tipo != `queso` &&
+//     tipo != `oregano` &&
+//     tipo != `cebolla`
+//   ) {
+//     tipo = prompt(
+//       `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
+//     ).toLowerCase();
+//   }
+// }
 
 switch (sabores) {
   case 1:

@@ -1,4 +1,4 @@
-let talita = 600;
+const talita = 600;
 
 alert(`Bienvenido a Donatto`);
 
@@ -42,15 +42,21 @@ let cantidad3 = 0;
 let cantidad4 = 0;
 let cantidad5 = 0;
 
-// function pedirCantidad(unidades, tipo) {
-//   unidades = parseInt(prompt(`Cuantas talitas de ${tipo} vas a querer?`));
+let cantidadTotal = 0;
 
-//   while (Number.isInteger(unidades) == false) {
-//     unidades = parseInt(
-//       prompt(`Ingresa un numero, cuantas talitas de ${tipo} vas a querer?`)
-//     );
-//   }
-// }
+function pedirCantidad(unidades, tipo) {
+  unidades = parseInt(prompt(`Cuantas talitas de ${tipo} vas a querer?`));
+
+  while (Number.isInteger(unidades) == false) {
+    unidades = parseInt(
+      prompt(`Ingresa un numero, cuantas talitas de ${tipo} vas a querer?`)
+    );
+  }
+
+  cantidadTotal += unidades;
+
+  console.log(`${tipo}: ${unidades} unidades\n`);
+}
 
 // function definirSabor(tipo) {
 //   console.log(tipo);
@@ -87,16 +93,9 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad = parseInt(prompt(`Cuantas talitas de ${sabor} vas a querer?`));
+    console.log(`Resumen de compra`);
 
-    while (Number.isInteger(cantidad) == false) {
-      cantidad = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor} vas a querer?`)
-      );
-    }
-
-    console.log(`Resumen de compra\n
-    ${sabor}: ${cantidad} unidades\n`);
+    pedirCantidad(cantidad, sabor);
 
     break;
 
@@ -116,13 +115,9 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad = parseInt(prompt(`Cuantas talitas de ${sabor} vas a querer?`));
+    console.log(`Resumen de compra`);
 
-    while (Number.isInteger(cantidad) == false) {
-      cantidad = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor} vas a querer?`)
-      );
-    }
+    pedirCantidad(cantidad, sabor);
 
     sabor2 = prompt(
       `Elije tu segundo sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
@@ -139,17 +134,7 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad2 = parseInt(prompt(`Cuantas talitas de ${sabor2} vas a querer?`));
-
-    while (Number.isInteger(cantidad2) == false) {
-      cantidad2 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor2} vas a querer?`)
-      );
-    }
-
-    console.log(`Resumen de compra\n
-    ${sabor}: ${cantidad} unidades\n
-    ${sabor2}: ${cantidad2} unidades\n`);
+    pedirCantidad(cantidad2, sabor2);
 
     break;
 
@@ -169,13 +154,9 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad = parseInt(prompt(`Cuantas talitas de ${sabor} vas a querer?`));
+    console.log(`Resumen de compra`);
 
-    while (Number.isInteger(cantidad) == false) {
-      cantidad = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor} vas a querer?`)
-      );
-    }
+    pedirCantidad(cantidad, sabor);
 
     sabor2 = prompt(
       `Elije tu segundo sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
@@ -192,13 +173,7 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad2 = parseInt(prompt(`Cuantas talitas de ${sabor2} vas a querer?`));
-
-    while (Number.isInteger(cantidad2) == false) {
-      cantidad2 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor2} vas a querer?`)
-      );
-    }
+    pedirCantidad(cantidad2, sabor2);
 
     sabor3 = prompt(
       `Elije tu tercer sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
@@ -215,18 +190,7 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad3 = parseInt(prompt(`Cuantas talitas de ${sabor3} vas a querer?`));
-
-    while (Number.isInteger(cantidad3) == false) {
-      cantidad3 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor3} vas a querer?`)
-      );
-    }
-
-    console.log(`Resumen de compra\n
-    ${sabor}: ${cantidad} unidades\n
-    ${sabor2}: ${cantidad2} unidades\n
-    ${sabor3}: ${cantidad3} unidades\n`);
+    pedirCantidad(cantidad3, sabor3);
 
     break;
 
@@ -246,13 +210,9 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad = parseInt(prompt(`Cuantas talitas de ${sabor} vas a querer?`));
+    console.log(`Resumen de compra`);
 
-    while (Number.isInteger(cantidad) == false) {
-      cantidad = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor} vas a querer?`)
-      );
-    }
+    pedirCantidad(cantidad, sabor);
 
     sabor2 = prompt(
       `Elije tu segundo sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
@@ -269,13 +229,7 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad2 = parseInt(prompt(`Cuantas talitas de ${sabor2} vas a querer?`));
-
-    while (Number.isInteger(cantidad2) == false) {
-      cantidad2 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor2} vas a querer?`)
-      );
-    }
+    pedirCantidad(cantidad2, sabor2);
 
     sabor3 = prompt(
       `Elije tu tercer sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
@@ -292,13 +246,7 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad3 = parseInt(prompt(`Cuantas talitas de ${sabor3} vas a querer?`));
-
-    while (Number.isInteger(cantidad3) == false) {
-      cantidad3 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor3} vas a querer?`)
-      );
-    }
+    pedirCantidad(cantidad3, sabor3);
 
     sabor4 = prompt(
       `Elije tu cuarto sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
@@ -315,19 +263,7 @@ switch (sabores) {
       ).toLowerCase();
     }
 
-    cantidad4 = parseInt(prompt(`Cuantas talitas de ${sabor4} vas a querer?`));
-
-    while (Number.isInteger(cantidad4) == false) {
-      cantidad4 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor4} vas a querer?`)
-      );
-    }
-
-    console.log(`Resumen de compra\n
-    ${sabor}: ${cantidad} unidades\n
-    ${sabor2}: ${cantidad2} unidades\n
-    ${sabor3}: ${cantidad3} unidades\n
-    ${sabor4}: ${cantidad4} unidades\n`);
+    pedirCantidad(cantidad4, sabor4);
 
     break;
 
@@ -338,57 +274,17 @@ switch (sabores) {
     sabor4 = `oregano`;
     sabor5 = `cebolla`;
 
-    cantidad = parseInt(prompt(`Cuantas talitas de ${sabor} vas a querer?`));
-
-    while (Number.isInteger(cantidad) == false) {
-      cantidad = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor} vas a querer?`)
-      );
-    }
-
-    cantidad2 = parseInt(prompt(`Cuantas talitas de ${sabor2} vas a querer?`));
-
-    while (Number.isInteger(cantidad2) == false) {
-      cantidad2 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor2} vas a querer?`)
-      );
-    }
-
-    cantidad3 = parseInt(prompt(`Cuantas talitas de ${sabor3} vas a querer?`));
-
-    while (Number.isInteger(cantidad3) == false) {
-      cantidad3 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor3} vas a querer?`)
-      );
-    }
-
-    cantidad4 = parseInt(prompt(`Cuantas talitas de ${sabor4} vas a querer?`));
-
-    while (Number.isInteger(cantidad4) == false) {
-      cantidad4 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor4} vas a querer?`)
-      );
-    }
-
-    cantidad5 = parseInt(prompt(`Cuantas talitas de ${sabor5} vas a querer?`));
-
-    while (Number.isInteger(cantidad5) == false) {
-      cantidad5 = parseInt(
-        prompt(`Ingresa un numero, cuantas talitas de ${sabor5} vas a querer?`)
-      );
-    }
-
-    console.log(`Resumen de compra\n
-    ${sabor}: ${cantidad} unidades\n
-    ${sabor2}: ${cantidad2} unidades\n
-    ${sabor3}: ${cantidad3} unidades\n
-    ${sabor4}: ${cantidad4} unidades\n
-    ${sabor5}: ${cantidad5} unidades\n`);
+    console.log(`Resumen de compra`);
+    pedirCantidad(cantidad, sabor);
+    pedirCantidad(cantidad2, sabor2);
+    pedirCantidad(cantidad3, sabor3);
+    pedirCantidad(cantidad4, sabor4);
+    pedirCantidad(cantidad5, sabor5);
 
     break;
 }
 
-let cantidadTotal = cantidad + cantidad2 + cantidad3 + cantidad4 + cantidad5;
+// let cantidadTotal = cantidad + cantidad2 + cantidad3 + cantidad4 + cantidad5;
 
 const IVA = 1.21;
 

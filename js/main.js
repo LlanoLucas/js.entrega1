@@ -30,6 +30,8 @@ while (
   );
 }
 
+tipo = "";
+
 let sabor = "";
 let sabor2 = "";
 let sabor3 = "";
@@ -44,22 +46,22 @@ let cantidad5 = 0;
 
 let cantidadTotal = 0;
 
-function definirSabor(tipo) {
-  tipo = prompt(
-    `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-  ).toLowerCase();
-  while (
-    tipo != `original` &&
-    tipo != `jamon` &&
-    tipo != `queso` &&
-    tipo != `oregano` &&
-    tipo != `cebolla`
-  ) {
-    tipo = prompt(
-      `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-  }
-}
+// function definirSabor(tipo) {
+//   tipo = prompt(
+//     `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano o Cebolla`
+//   ).toLowerCase();
+//   while (
+//     tipo != `original` &&
+//     tipo != `jamon` &&
+//     tipo != `queso` &&
+//     tipo != `oregano` &&
+//     tipo != `cebolla`
+//   ) {
+//     tipo = prompt(
+//       `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano o Cebolla`
+//     ).toLowerCase();
+//   }
+// } no me funciona la funcion
 
 function pedirCantidad(unidades, tipo) {
   unidades = parseInt(prompt(`Cuantas talitas de ${tipo} vas a querer?`));
@@ -77,22 +79,22 @@ function pedirCantidad(unidades, tipo) {
 
 switch (sabores) {
   case 1:
-    // sabor = prompt(
-    //   `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    // ).toLowerCase();
-    // while (
-    //   sabor != `original` &&
-    //   sabor != `jamon` &&
-    //   sabor != `queso` &&
-    //   sabor != `oregano` &&
-    //   sabor != `cebolla`
-    // ) {
-    //   sabor = prompt(
-    //     `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    //   ).toLowerCase();
-    // }
+    sabor = prompt(
+      `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
+    ).toLowerCase();
+    while (
+      sabor != `original` &&
+      sabor != `jamon` &&
+      sabor != `queso` &&
+      sabor != `oregano` &&
+      sabor != `cebolla`
+    ) {
+      sabor = prompt(
+        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
+      ).toLowerCase();
+    }
 
-    definirSabor(sabor);
+    // definirSabor(sabor);
 
     console.log(`Resumen de compra`);
 

@@ -1,4 +1,4 @@
-const talita = 600;
+const TALITA = 600;
 
 alert(`Bienvenido a Donatto`);
 
@@ -30,38 +30,38 @@ while (
   );
 }
 
-tipo = "";
+let sabor;
+let sabor2;
+let sabor3;
+let sabor4;
+let sabor5;
 
-let sabor = "";
-let sabor2 = "";
-let sabor3 = "";
-let sabor4 = "";
-let sabor5 = "";
-
-let cantidad = 0;
-let cantidad2 = 0;
-let cantidad3 = 0;
-let cantidad4 = 0;
-let cantidad5 = 0;
+let cantidad;
+let cantidad2;
+let cantidad3;
+let cantidad4;
+let cantidad5;
 
 let cantidadTotal = 0;
 
-// function definirSabor(tipo) {
-//   tipo = prompt(
-//     `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano o Cebolla`
-//   ).toLowerCase();
-//   while (
-//     tipo != `original` &&
-//     tipo != `jamon` &&
-//     tipo != `queso` &&
-//     tipo != `oregano` &&
-//     tipo != `cebolla`
-//   ) {
-//     tipo = prompt(
-//       `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano o Cebolla`
-//     ).toLowerCase();
-//   }
-// } no me funciona la funcion
+function definirSabor(tipo) {
+  tipo = prompt(
+    `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano o Cebolla`
+  ).toLowerCase();
+  while (
+    tipo != `original` &&
+    tipo != `jamon` &&
+    tipo != `queso` &&
+    tipo != `oregano` &&
+    tipo != `cebolla`
+  ) {
+    tipo = prompt(
+      `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano o Cebolla`
+    ).toLowerCase();
+  }
+
+  return tipo;
+}
 
 function pedirCantidad(unidades, tipo) {
   unidades = parseInt(prompt(`Cuantas talitas de ${tipo} vas a querer?`));
@@ -74,197 +74,65 @@ function pedirCantidad(unidades, tipo) {
 
   cantidadTotal += unidades;
 
-  console.log(`${tipo}: ${unidades} unidades\n`);
+  return console.log(`${tipo}: ${unidades} unidades\n`);
 }
 
 switch (sabores) {
   case 1:
-    sabor = prompt(
-      `Elije tu sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor != `original` &&
-      sabor != `jamon` &&
-      sabor != `queso` &&
-      sabor != `oregano` &&
-      sabor != `cebolla`
-    ) {
-      sabor = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
-
-    // definirSabor(sabor);
-
     console.log(`Resumen de compra`);
+
+    sabor = definirSabor(sabor);
 
     pedirCantidad(cantidad, sabor);
 
     break;
 
   case 2:
-    sabor = prompt(
-      `Elije tu primer sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor != `original` &&
-      sabor != `jamon` &&
-      sabor != `queso` &&
-      sabor != `oregano` &&
-      sabor != `cebolla`
-    ) {
-      sabor = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
-
     console.log(`Resumen de compra`);
+
+    sabor = definirSabor(sabor);
 
     pedirCantidad(cantidad, sabor);
 
-    sabor2 = prompt(
-      `Elije tu segundo sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor2 != `original` &&
-      sabor2 != `jamon` &&
-      sabor2 != `queso` &&
-      sabor2 != `oregano` &&
-      sabor2 != `cebolla`
-    ) {
-      sabor2 = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
+    sabor2 = definirSabor(sabor2);
 
     pedirCantidad(cantidad2, sabor2);
 
     break;
 
   case 3:
-    sabor = prompt(
-      `Elije tu primer sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor != `original` &&
-      sabor != `jamon` &&
-      sabor != `queso` &&
-      sabor != `oregano` &&
-      sabor != `cebolla`
-    ) {
-      sabor = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
-
     console.log(`Resumen de compra`);
+
+    sabor = definirSabor(sabor);
 
     pedirCantidad(cantidad, sabor);
 
-    sabor2 = prompt(
-      `Elije tu segundo sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor2 != `original` &&
-      sabor2 != `jamon` &&
-      sabor2 != `queso` &&
-      sabor2 != `oregano` &&
-      sabor2 != `cebolla`
-    ) {
-      sabor2 = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
+    sabor2 = definirSabor(sabor2);
 
     pedirCantidad(cantidad2, sabor2);
 
-    sabor3 = prompt(
-      `Elije tu tercer sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor3 != `original` &&
-      sabor3 != `jamon` &&
-      sabor3 != `queso` &&
-      sabor3 != `oregano` &&
-      sabor3 != `cebolla`
-    ) {
-      sabor3 = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
+    sabor3 = definirSabor(sabor3);
 
     pedirCantidad(cantidad3, sabor3);
 
     break;
 
   case 4:
-    sabor = prompt(
-      `Elije tu primer sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor != `original` &&
-      sabor != `jamon` &&
-      sabor != `queso` &&
-      sabor != `oregano` &&
-      sabor != `cebolla`
-    ) {
-      sabor = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
-
     console.log(`Resumen de compra`);
+
+    sabor = definirSabor(sabor);
 
     pedirCantidad(cantidad, sabor);
 
-    sabor2 = prompt(
-      `Elije tu segundo sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor2 != `original` &&
-      sabor2 != `jamon` &&
-      sabor2 != `queso` &&
-      sabor2 != `oregano` &&
-      sabor2 != `cebolla`
-    ) {
-      sabor2 = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
+    sabor2 = definirSabor(sabor2);
 
     pedirCantidad(cantidad2, sabor2);
 
-    sabor3 = prompt(
-      `Elije tu tercer sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor3 != `original` &&
-      sabor3 != `jamon` &&
-      sabor3 != `queso` &&
-      sabor3 != `oregano` &&
-      sabor3 != `cebolla`
-    ) {
-      sabor3 = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
+    sabor3 = definirSabor(sabor3);
 
     pedirCantidad(cantidad3, sabor3);
 
-    sabor4 = prompt(
-      `Elije tu cuarto sabor:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-    ).toLowerCase();
-    while (
-      sabor4 != `original` &&
-      sabor4 != `jamon` &&
-      sabor4 != `queso` &&
-      sabor4 != `oregano` &&
-      sabor4 != `cebolla`
-    ) {
-      sabor4 = prompt(
-        `Elije un sabor valido:\nOriginal, Jamon, Queso, Oregano y Cebolla`
-      ).toLowerCase();
-    }
+    sabor4 = definirSabor(sabor4);
 
     pedirCantidad(cantidad4, sabor4);
 
@@ -291,9 +159,9 @@ switch (sabores) {
 
 const IVA = 1.21;
 
-let subtotal = cantidadTotal * talita;
+let subtotal = cantidadTotal * TALITA;
 
-let total = cantidadTotal * (talita * IVA);
+let total = cantidadTotal * (TALITA * IVA);
 
 let porcentajeDescEmpresa = 0.35;
 
